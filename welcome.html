@@ -1,0 +1,68 @@
+<html>
+<head>
+<title> process file </title>
+
+<script language="javascript" type="text/javascript">
+function atm(c)
+{
+var c=parseInt(prompt("Enter your choice: "));
+var a=parseInt(prompt("Enter your balance amount: "));
+switch(c)
+{
+case 1:
+	document.write("<center><b><br/><br/>DEPOSIT");
+	var s=parseInt(prompt("Enter the Deposit amount: "));
+	a=a+s;
+	document.write("<br/><br/><b><center><br>Your Balance After Depositing: "+a);
+	document.write("<br/><br/><b><center><br>Thank you....VISIT AGAIN");
+	break;
+case 2:
+	document.write("<center><b><br/><br/>WITHDRAW");
+	var t=parseInt(prompt("Enter the Withdrawl amount: "));
+	a=a-t;
+	document.write("<br/><br/><b><center><br>Your Balance after Withdrawl: "+a);
+	document.write("<br/><br/><b><center><br>Thank you....VISIT AGAIN");
+	break;
+case 3:
+	document.write("<center><b><br/><br/>FUND TRANSFER");
+	var acc=parseInt(prompt("Enter account number: "));
+	var u=parseInt(prompt("Enter the amount: "));
+	a=a-u;
+	document.write("<center><b><br/><br/>Fund Transfered Successfully");
+	document.write("<center><b><br/><br/>Your Balance: "+a);
+	document.write("<br/><br/><b><center><br>Thank you....VISIT AGAIN");
+	break;
+case 4:
+	document.write("<center><b><br/><br/>BALANCE ENQUIRY");
+	document.write("<center><b><br/><br/>Your Balance: "+a);
+	document.write("<br/><br/><b><center><br>Thank you....VISIT AGAIN");
+	break;
+default:
+	document.write("<center><b><br/><br/>INVALID CHOICE");
+	document.write("<br/><br/><b><center><br>Thank you....VISIT AGAIN");
+	break;
+}
+
+}
+</script>
+</head>
+<body>
+<style type="text/css">
+body {
+background-image: url(pic.png);
+background-repeat: repeat;
+background-size: cover ;
+}
+</style>
+<form>
+<center><br><br><br><br><br><br><br><br><br><br>
+<p style="color: brown;"> <b>RE-ENTER PASSWORD:  <input type="password" name="pswrd"><br>
+<br><br>  1. DEPOSIT<br><br>  2. WITHDRAW<br><br>  3. FUND TRANSFER<br><br>  4. BALANCE ENQUIRY<br><br>
+PRESS:  1. YES   2. NO<br><br><br><br><br><br>
+<br>SURE 2 CONTINUE:  <input type="number" id="tp" value="ch"><br><br><br>
+<input type="button" onclick="atm(tp)" value="Proceed">
+</p></b>
+</center>
+</form>
+</body>
+</html>
